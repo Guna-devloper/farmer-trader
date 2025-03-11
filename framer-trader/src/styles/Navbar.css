@@ -1,72 +1,75 @@
-/* 🌟 Navbar Styling */
+/* Navbar Styles */
 .navbar {
-  background: #ff9800;
+  background-color: #2c3e50; /* Dark theme */
   padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar Container */
 .nav-container {
-  width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* 🌟 Logo */
+/* Logo */
 .logo a {
-  font-size: 24px;
-  font-weight: bold;
   color: white;
+  font-size: 22px;
+  font-weight: bold;
   text-decoration: none;
 }
 
-/* 🌟 Navigation Links */
+/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 20px;
 }
 
+/* Nav Links Styling */
 .nav-links li a {
+  text-decoration: none;
   color: white;
   font-size: 18px;
-  text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-links li a:hover {
-  color: #ffd54f;
+  color: #f39c12; /* Orange hover effect */
 }
 
-/* 🔥 Logout Button */
+/* Logout Button */
 .logout-btn {
-  background: white;
-  color: #ff9800;
-  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: white;
   border: none;
+  padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .logout-btn:hover {
-  background: #ffd54f;
-  color: #333;
+  background-color: #c0392b;
 }
 
-/* 📱 Responsive Navbar */
+/* Menu Icon for Mobile */
 .menu-icon {
   display: none;
-  font-size: 24px;
+  font-size: 26px;
   color: white;
   cursor: pointer;
 }
 
-/* 📱 Mobile View */
+/* Mobile View */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -75,27 +78,31 @@
   .nav-links {
     position: absolute;
     top: 60px;
-    left: 0;
+    right: 0;
     width: 100%;
-    background: #ff9800;
-    display: flex;
+    height: 100vh;
+    background-color: #2c3e50;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    display: none;
     text-align: center;
-    padding: 20px;
-    transform: translateY(-100%);
-    transition: 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .nav-links.open {
-    transform: translateY(0);
+    display: flex;
   }
 
   .nav-links li {
-    padding: 10px 0;
+    padding: 15px 0;
   }
 
   .logout-btn {
-    width: 100%;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 10px;
   }
 }

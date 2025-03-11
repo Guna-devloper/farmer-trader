@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../styles/Navbar.css"; // Import updated CSS
+import "../styles/Navbar.css"; // Ensure this file exists
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -15,7 +15,7 @@ const Navbar = () => {
       setUser(user);
     });
     return () => unsubscribe();
-  }, [auth]);
+  }, []);
 
   const handleLogout = async () => {
     try {
@@ -31,12 +31,12 @@ const Navbar = () => {
       <div className="nav-container">
         {/* Logo */}
         <div className="logo">
-          <Link to="/home">🌾 Farmer Trader</Link>
+          <Link to="/home">🌾 FarmerTrader</Link>
         </div>
 
-        {/* Hamburger Menu */}
+        {/* Mobile Menu Icon */}
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
+          {menuOpen ? <FaTimes className="icon" /> : <FaBars className="icon" />}
         </div>
 
         {/* Navigation Links */}

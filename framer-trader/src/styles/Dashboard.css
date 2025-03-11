@@ -1,140 +1,160 @@
-/* General Container */
+/* Dashboard Container */
 .dashboard-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* User Info Section */
-  .dashboard-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .user-avatar {
-    width: 80px;
-    border-radius: 50%;
-  }
-  
-  .user-email {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .user-role {
-    color: #555;
-  }
-  
-  .logout-button {
-    background: #ff4d4d;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .logout-button:hover {
-    background: #d43f3f;
-  }
-  
-  /* Stock Chart Section */
-  .stock-chart-container {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .chart-wrapper {
-    width: 100%;
-    height: 300px; /* Makes the chart responsive */
-  }
-  
-  /* Portfolio Section */
-  .portfolio-section {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .portfolio-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .portfolio-section li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .portfolio-section li span {
-    font-weight: bold;
-  }
-  
-  /* Recent Trades Section */
-  .recent-trades {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .table-wrapper {
-    overflow-x: auto; /* Makes table scrollable on small screens */
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* User Info Card */
+.dashboard-card {
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-email {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.user-role {
+  font-size: 16px;
+  color: #f1c40f;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Stock Market Chart */
+.stock-chart-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 300px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.portfolio-section li:last-child {
+  border-bottom: none;
+}
+
+/* Recent Trades Table */
+.recent-trades {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+.profit {
+  color: green;
+  font-weight: bold;
+}
+
+.loss {
+  color: red;
+  font-weight: bold;
+}
+
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+  .dashboard-container {
     padding: 10px;
-    text-align: center;
   }
-  
-  th {
-    background: #4CAF50;
-    color: white;
+
+  .dashboard-card {
+    width: 90%;
   }
-  
-  .profit {
-    color: green;
+
+  .stock-chart-container,
+  .portfolio-section,
+  .recent-trades {
+    width: 100%;
+    padding: 15px;
   }
-  
-  .loss {
-    color: red;
+
+  .chart-wrapper {
+    height: 250px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .dashboard-container {
-      padding: 10px;
-    }
-  
-    .dashboard-card, .stock-chart-container, .portfolio-section, .recent-trades {
-      padding: 15px;
-    }
-  
-    .chart-wrapper {
-      height: 250px; /* Adjust chart size for mobile */
-    }
-  
-    th, td {
-      padding: 8px;
-    }
+
+  table {
+    font-size: 14px;
   }
-  
+}
