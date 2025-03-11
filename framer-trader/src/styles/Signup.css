@@ -1,0 +1,110 @@
+/* 🌟 Signup Page Styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9800, #ffb74d);
+  }
+  
+  .signup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  /* 🌟 Input Fields */
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .input-group input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-group .icon {
+    color: #ff9800;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  /* 👀 Password Toggle */
+  .toggle-password {
+    cursor: pointer;
+    color: #ff9800;
+    font-size: 18px;
+  }
+  
+  /* 🔥 Signup Button */
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .signup-btn:hover {
+    background: #e65100;
+    transform: scale(1.05);
+  }
+  
+  /* 🔗 Login Link */
+  .login-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 📱 Mobile Responsive */
+  @media (max-width: 480px) {
+    .signup-box {
+      width: 90%;
+      padding: 25px;
+    }
+  
+    .input-group input {
+      font-size: 14px;
+    }
+  
+    .signup-btn {
+      font-size: 16px;
+    }
+  }
+  

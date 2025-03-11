@@ -1,0 +1,151 @@
+/* 🌟 General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.home-container {
+  text-align: center;
+  padding: 0;
+}
+
+/* 🔥 Hero Section */
+.hero-section {
+  background: url("https://source.unsplash.com/1600x900/?farm,market") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff9800;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background: #e68900;
+}
+
+/* 🌾 Categories Section */
+.categories {
+  padding: 40px 20px;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category-card {
+  background: #ff9800;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  background: #e68900;
+}
+
+/* 🔥 Trending Products */
+.trending {
+  padding: 40px 20px;
+  background: white;
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.trending-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.trending-image {
+  width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* 🌟 Why Choose Us */
+.why-choose-us {
+  padding: 40px 20px;
+  background: #ff9800;
+  color: white;
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.benefit-card {
+  background: white;
+  color: #ff9800;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 🏁 Footer */
+.footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #ff9800;
+  text-decoration: none;
+  margin: 0 10px;
+}
